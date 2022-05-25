@@ -1,18 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route} from "react-router-dom";
+import Home from './pages/Home';
+import About from './pages/About';
+import Courses from './pages/Courses';
+import Contact from './pages/Contact';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+    <Routes>
+    <Route path='/' element={<Home />} />
+    <Route path='/about' element={<About />} />
+    <Route path='/courses' element={<Courses />} />
+    <Route path='/contact' element={<Contact />} />
+    </Routes>
 
-        <p>
-            Mon projet React JS
-        </p>
-        <a className="App-link" href="#">
-          Plus d'infos
-        </a>
-      </header>
+     
     </div>
   );
 }
